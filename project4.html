@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прикольный Адаптивный Navbar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+    background: #ffffff;
+    color: white;
+    height: 100vh;
+    background:url(hef.jpg) ;
+    color: white;
+    
+  }
+
+    
+
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.01);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    
+    .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      animation: logoAnimation 2s ease infinite alternate;
+    }
+
+    @keyframes logoAnimation {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(10deg) scale(1.1); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+
+    
+    ul {
+      display: flex;
+      list-style: none;
+    }
+
+    ul li {
+      margin: 0 15px;
+      position: relative;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      padding: 5px 0;
+      transition: 0.3s;
+    }
+
+    
+    ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background: #ff4d6d;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s;
+      border-radius: 3px;
+    }
+
+    ul li a:hover::after {
+      width: 100%;
+    }
+
+    ul li a:hover {
+      color: #ff4d6d;
+    }
+
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+
+   
+    @media (max-width: 768px) {
+      ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #2a2a3d;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+      }
+
+      ul li {
+        margin: 15px;
+      }
+
+      input[type="checkbox"]:checked ~ ul {
+        display: flex; 
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    
+    #menu-toggle {
+      display: none;
+    }
+    .log{
+      width: 300px;
+      height: 500px;
+      background-color: whitesmoke;
+      border-radius: 30px;
+      box-shadow: 0 2px 10px rgb(99, 99, 98);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Логотип"> 
+    </div>
+
+   
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Услуги</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><a href="#">Блог</a></li>
+    </ul>
+  </nav>
+  <br><br><br><br><br><br>
+  <nav><div class="log"><img src="gavva.webp" alt="" width="250px" height="250px" style="border-radius: 10px; display: flex;">
+  <h3 style="padding-top: 20px;color: rgba(3, 3, 3, 0.801);">Narx:$8,000,000</h3><br>
+  <button style="width: 70px; height: 30px;border-radius: 10px;background-color: yellow;">Buy now</button>
+  
+  <a href="" style="text-decoration: none;">💖</a>
+  <a href="" style="text-decoration: none;">🛒</a>
+  
+</div>
+ <div class="log"><img src="gavva.webp" alt="" width="250px" height="250px" style="border-radius: 10px; display: flex;">
+  <h3 style="padding-top: 20px;color: rgba(3, 3, 3, 0.801);">Narx:$8,000,000</h3><br>
+  <button style="width: 70px; height: 30px;border-radius: 10px;background-color: yellow;">Buy now</button>
+  
+  <a href="" style="text-decoration: none;">💖</a>
+  <a href="" style="text-decoration: none;">🛒</a>
+  
+</div>
+ <div class="log"><img src="gavva.webp" alt="" width="250px" height="250px" style="border-radius: 10px; display: flex;">
+  <h3 style="padding-top: 20px;color: rgba(3, 3, 3, 0.801);">Narx:$8,000,000</h3><br>
+  <button style="width: 70px; height: 30px;border-radius: 10px;background-color: yellow;">Buy now</button>
+  
+  <a href="" style="text-decoration: none;">💖</a>
+  <a href="" style="text-decoration: none;">🛒</a>
+  
+</div>
+ <div class="log"><img src="gavva.webp" alt="" width="250px" height="250px" style="border-radius: 10px; display: flex;">
+  <h3 style="padding-top: 20px;color: rgba(3, 3, 3, 0.801);">Narx:$8,000,000</h3><br>
+  <button style="width: 70px; height: 30px;border-radius: 10px;background-color: yellow;">Buy now</button>
+  
+  <a href="" style="text-decoration: none;">💖</a>
+  <a href="" style="text-decoration: none;">🛒</a>
+  
+</div></nav>
+ 
+</body>
+</html>
